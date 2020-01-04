@@ -6,6 +6,11 @@
   :group 'lsp-racket
   :type 'string)
 
+(defcustom lsp-racket-server-args '()
+  "Extra arguments for the Racket language server."
+  :group 'lsp-racket
+  :type '(repeat string))
+
 (defun lsp-racket--server-command ()
   "Generate the language server startup command."
   `(,lsp-racket-executable-path "--lib" "racket-langserver" ,@lsp-racket-server-args))
