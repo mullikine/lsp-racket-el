@@ -10,8 +10,6 @@
   "Generate the language server startup command."
   `(,lsp-racket-executable-path "--lib" "racket-langserver" ,@lsp-racket-server-args))
 
-(require 'lsp-mode)
-
 (defvar lsp-racket--config-options `())
 
 (lsp-register-client
